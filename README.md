@@ -9,7 +9,8 @@ Descargar la ultima version en esta [enlace](https://github.com/WekarXD/SteamBlo
 Guardar el archivo descargado en la raiz del juego, luego se puede crear un acceso directo o [añadirlo a Steam](#instalación) como juego.
 
 ## Añadir a Steam como juego
-En Steam añadir un juego que no es de Steam y buscar el cmd.exe encontrado en la ruta **"C:\Windows\System32\cmd.exe"**
+En Steam añadir un juego que no es de Steam y buscar el cmd.exe encontrado en la ruta **"C:\Windows\System32\cmd.exe"**.
+
 En las propiedades del juego que se acaba de crear en steam y modificar las siguientes opciones.
  - Cambiar el Nombre y el icono por los deseados.
  - En destino sustituir por la siguiente linea.
