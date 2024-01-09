@@ -26,14 +26,11 @@ if %errorlevel% EQU 0 goto START
 cd /d %~dp0
 :: Place the code which requires Admin/elevation below
 
-
 set exe_name=bg3_dx11.exe
-
-
 
 netsh advfirewall firewall add rule name= "SteamBlock" dir=in program= "C:\Program Files (x86)\Steam\Steam.exe" action=block
 netsh advfirewall firewall add rule name= "SteamBlock" dir=out program= "C:\Program Files (x86)\Steam\Steam.exe" action=block
-timeout 1
+
 :: Open BG3 as dx11
 start D:\SteamLibrary\steamapps\common\Baldurs" "Gate" "3\bin\bg3_dx11.exe
 :: Open BG3 as Vulkan
@@ -52,4 +49,6 @@ if "%ERRORLEVEL%"=="0" (
     rem Elimina la regla de firewall
     netsh advfirewall firewall delete rule name= "SteamBlock" program= "C:\Program Files (x86)\Steam\Steam.exe"
     timeout 1
+    del *.log
+    rmdir /s /q db
 )
